@@ -1,4 +1,4 @@
-# ⚡ ProductHub — MERN Stack Product Management App
+# ⚡ ShopNest — MERN Stack Product Management App
 
 > **Task 5 — API Integration & Front-End Interaction**
 > Full-stack MERN app with MVC architecture, REST API, React frontend, dark/light mode, search, filter, sort, and pagination.
