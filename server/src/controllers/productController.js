@@ -91,7 +91,7 @@ export const getProductById = (req, res) => {
 export const createProduct = (req, res) => {
   try {
     if (req.file) {
-      req.body.image = `http://localhost:${process.env.PORT || 5000}/uploads/${req.file.filename}`;
+      req.body.image = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
     }
     const product = ProductModel.create(req.body);
     res.status(201).json({ success: true, data: product, message: 'Product created successfully' });
@@ -105,7 +105,7 @@ export const createProduct = (req, res) => {
 export const updateProduct = (req, res) => {
   try {
     if (req.file) {
-      req.body.image = `http://localhost:${process.env.PORT || 5000}/uploads/${req.file.filename}`;
+      req.body.image = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
     }
     const product = ProductModel.update(req.params.id, req.body);
     if (!product) {
